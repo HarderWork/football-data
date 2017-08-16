@@ -13,12 +13,6 @@
         <li><?= $this->Html->link(__('New Team'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Leagues'), ['controller' => 'Leagues', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New League'), ['controller' => 'Leagues', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Pool Team Aliases'), ['controller' => 'PoolTeamAliases', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Pool Team Alias'), ['controller' => 'PoolTeamAliases', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Pool Team Positions'), ['controller' => 'PoolTeamPositions', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Pool Team Position'), ['controller' => 'PoolTeamPositions', 'action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Pool Team Results'), ['controller' => 'PoolTeamResults', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Pool Team Result'), ['controller' => 'PoolTeamResults', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Team Aliases'), ['controller' => 'TeamAliases', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Team Alias'), ['controller' => 'TeamAliases', 'action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Team Results'), ['controller' => 'TeamResults', 'action' => 'index']) ?> </li>
@@ -85,117 +79,6 @@
             <td><?= h($team->modified) ?></td>
         </tr>
     </table>
-    <div class="related">
-        <h4><?= __('Related Pool Team Aliases') ?></h4>
-        <?php if (!empty($team->pool_team_aliases)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Name') ?></th>
-                <th scope="col"><?= __('Team Id') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($team->pool_team_aliases as $poolTeamAliases): ?>
-            <tr>
-                <td><?= h($poolTeamAliases->id) ?></td>
-                <td><?= h($poolTeamAliases->name) ?></td>
-                <td><?= h($poolTeamAliases->team_id) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'PoolTeamAliases', 'action' => 'view', $poolTeamAliases->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'PoolTeamAliases', 'action' => 'edit', $poolTeamAliases->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'PoolTeamAliases', 'action' => 'delete', $poolTeamAliases->id], ['confirm' => __('Are you sure you want to delete # {0}?', $poolTeamAliases->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Pool Team Positions') ?></h4>
-        <?php if (!empty($team->pool_team_positions)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Team Id') ?></th>
-                <th scope="col"><?= __('Total') ?></th>
-                <th scope="col"><?= __('TotalHome') ?></th>
-                <th scope="col"><?= __('TotalAway') ?></th>
-                <th scope="col"><?= __('Form') ?></th>
-                <th scope="col"><?= __('FormHome') ?></th>
-                <th scope="col"><?= __('FormAway') ?></th>
-                <th scope="col"><?= __('Created') ?></th>
-                <th scope="col"><?= __('Modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($team->pool_team_positions as $poolTeamPositions): ?>
-            <tr>
-                <td><?= h($poolTeamPositions->id) ?></td>
-                <td><?= h($poolTeamPositions->team_id) ?></td>
-                <td><?= h($poolTeamPositions->Total) ?></td>
-                <td><?= h($poolTeamPositions->TotalHome) ?></td>
-                <td><?= h($poolTeamPositions->TotalAway) ?></td>
-                <td><?= h($poolTeamPositions->Form) ?></td>
-                <td><?= h($poolTeamPositions->FormHome) ?></td>
-                <td><?= h($poolTeamPositions->FormAway) ?></td>
-                <td><?= h($poolTeamPositions->created) ?></td>
-                <td><?= h($poolTeamPositions->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'PoolTeamPositions', 'action' => 'view', $poolTeamPositions->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'PoolTeamPositions', 'action' => 'edit', $poolTeamPositions->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'PoolTeamPositions', 'action' => 'delete', $poolTeamPositions->id], ['confirm' => __('Are you sure you want to delete # {0}?', $poolTeamPositions->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
-    <div class="related">
-        <h4><?= __('Related Pool Team Results') ?></h4>
-        <?php if (!empty($team->pool_team_results)): ?>
-        <table cellpadding="0" cellspacing="0">
-            <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Played Game Id') ?></th>
-                <th scope="col"><?= __('DGameDate') ?></th>
-                <th scope="col"><?= __('League Id') ?></th>
-                <th scope="col"><?= __('Season Id') ?></th>
-                <th scope="col"><?= __('Team Id') ?></th>
-                <th scope="col"><?= __('BHomeTeam') ?></th>
-                <th scope="col"><?= __('BGamePlayed') ?></th>
-                <th scope="col"><?= __('BWon') ?></th>
-                <th scope="col"><?= __('BDraw') ?></th>
-                <th scope="col"><?= __('BLoss') ?></th>
-                <th scope="col"><?= __('IGoalsForward') ?></th>
-                <th scope="col"><?= __('IGoalsAgainst') ?></th>
-                <th scope="col"><?= __('IPoints') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-            <?php foreach ($team->pool_team_results as $poolTeamResults): ?>
-            <tr>
-                <td><?= h($poolTeamResults->id) ?></td>
-                <td><?= h($poolTeamResults->played_game_id) ?></td>
-                <td><?= h($poolTeamResults->dGameDate) ?></td>
-                <td><?= h($poolTeamResults->league_id) ?></td>
-                <td><?= h($poolTeamResults->season_id) ?></td>
-                <td><?= h($poolTeamResults->team_id) ?></td>
-                <td><?= h($poolTeamResults->bHomeTeam) ?></td>
-                <td><?= h($poolTeamResults->bGamePlayed) ?></td>
-                <td><?= h($poolTeamResults->bWon) ?></td>
-                <td><?= h($poolTeamResults->bDraw) ?></td>
-                <td><?= h($poolTeamResults->bLoss) ?></td>
-                <td><?= h($poolTeamResults->iGoalsForward) ?></td>
-                <td><?= h($poolTeamResults->iGoalsAgainst) ?></td>
-                <td><?= h($poolTeamResults->iPoints) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'PoolTeamResults', 'action' => 'view', $poolTeamResults->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'PoolTeamResults', 'action' => 'edit', $poolTeamResults->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'PoolTeamResults', 'action' => 'delete', $poolTeamResults->id], ['confirm' => __('Are you sure you want to delete # {0}?', $poolTeamResults->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>
-        <?php endif; ?>
-    </div>
     <div class="related">
         <h4><?= __('Related Team Aliases') ?></h4>
         <?php if (!empty($team->team_aliases)): ?>

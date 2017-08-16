@@ -10,9 +10,6 @@ use Cake\Validation\Validator;
  * Teams Model
  *
  * @property \FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\BelongsTo $Leagues
- * @property \FootballData\Model\Table\PoolTeamAliasesTable|\Cake\ORM\Association\HasMany $PoolTeamAliases
- * @property \FootballData\Model\Table\PoolTeamPositionsTable|\Cake\ORM\Association\HasMany $PoolTeamPositions
- * @property \FootballData\Model\Table\PoolTeamResultsTable|\Cake\ORM\Association\HasMany $PoolTeamResults
  * @property \FootballData\Model\Table\TeamAliasesTable|\Cake\ORM\Association\HasMany $TeamAliases
  * @property \FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
  *
@@ -48,18 +45,6 @@ class TeamsTable extends Table
         $this->belongsTo('Leagues', [
             'foreignKey' => 'league_id',
             'className' => 'FootballData.Leagues'
-        ]);
-        $this->hasMany('PoolTeamAliases', [
-            'foreignKey' => 'team_id',
-            'className' => 'FootballData.PoolTeamAliases'
-        ]);
-        $this->hasMany('PoolTeamPositions', [
-            'foreignKey' => 'team_id',
-            'className' => 'FootballData.PoolTeamPositions'
-        ]);
-        $this->hasMany('PoolTeamResults', [
-            'foreignKey' => 'team_id',
-            'className' => 'FootballData.PoolTeamResults'
         ]);
         $this->hasMany('TeamAliases', [
             'foreignKey' => 'team_id',

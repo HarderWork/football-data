@@ -9,12 +9,6 @@
         <li><?= $this->Html->link(__('List Teams'), ['action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('List Leagues'), ['controller' => 'Leagues', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New League'), ['controller' => 'Leagues', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Pool Team Aliases'), ['controller' => 'PoolTeamAliases', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Pool Team Alias'), ['controller' => 'PoolTeamAliases', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Pool Team Positions'), ['controller' => 'PoolTeamPositions', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Pool Team Position'), ['controller' => 'PoolTeamPositions', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Pool Team Results'), ['controller' => 'PoolTeamResults', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Pool Team Result'), ['controller' => 'PoolTeamResults', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Team Aliases'), ['controller' => 'TeamAliases', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Team Alias'), ['controller' => 'TeamAliases', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Team Results'), ['controller' => 'TeamResults', 'action' => 'index']) ?></li>
