@@ -21,7 +21,7 @@ class CreateTeams extends AbstractMigration
         $table->addColumn('league_id', 'integer', [
             'default' => null,
             'limit' => 11,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('logo', 'string', [
             'default' => null,
