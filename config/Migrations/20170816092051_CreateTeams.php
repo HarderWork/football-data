@@ -26,7 +26,7 @@ class CreateTeams extends AbstractMigration
         $table->addColumn('logo', 'string', [
             'default' => null,
             'limit' => 100,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('xmlsoccer_teamid', 'integer', [
             'default' => null,
@@ -41,22 +41,22 @@ class CreateTeams extends AbstractMigration
         $table->addColumn('country', 'string', [
             'default' => null,
             'limit' => 60,
-            'null' => false,
+            'null' => true,
         ]);
-        $table->addColumn('stafium', 'string', [
+        $table->addColumn('stadium', 'string', [
             'default' => null,
             'limit' => 60,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('home_page_url', 'string', [
             'default' => null,
             'limit' => 100,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('wiki_url', 'string', [
             'default' => null,
             'limit' => 100,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('squad_market_value', 'integer', [
             'default' => null,
@@ -66,15 +66,15 @@ class CreateTeams extends AbstractMigration
         $table->addColumn('crest_url', 'string', [
             'default' => null,
             'limit' => 100,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('created', 'datetime', [
             'default' => null,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('modified', 'datetime', [
             'default' => null,
-            'null' => false,
+            'null' => true,
         ]);
         $table->create();
     }
