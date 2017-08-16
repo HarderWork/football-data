@@ -25,7 +25,7 @@ class CreateTeamResults extends AbstractMigration
         ]);
         $table->addColumn('game_date', 'date', [
             'default' => null,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('league_id', 'integer', [
             'default' => null,
