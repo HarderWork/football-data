@@ -1,11 +1,35 @@
 # FootballData plugin for CakePHP
 
 ## Installation
-
-You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
-
-The recommended way to install composer packages is:
+Goto <app>/plugins folder and run
 
 ```
-composer require your-name-here/FootballData
+git clone https://github.com/HarderWork/football-data.git FootballData
+```
+
+then in config/bootstrap.php add
+
+```
+Plugin::load('FootballData', ['routes' => true]);
+```
+
+In composer.json add
+```
+    "autoload": {
+        "psr-4": {
+            "App\\": "src",
+            "FootballData\\": "./plugins/FootballData/src"
+        }
+    }
+```
+
+Save and run
+
+```
+composer dumpautoload
+```
+
+If tables are not created, run
+```
+bin/cake migrations migrate -p FootballData
 ```
