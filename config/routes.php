@@ -7,6 +7,7 @@ Router::plugin(
     'FootballData',
     ['path' => '/football-data'],
     function (RouteBuilder $routes) {
+        $routes->extensions(['json', 'xml']);
         $routes->fallbacks(DashedRoute::class);
     }
 );
