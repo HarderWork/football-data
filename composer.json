@@ -1,5 +1,5 @@
 {
-    "name": "your-name-here/FootballData",
+    "name": "HarderWork/FootballData",
     "description": "FootballData plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
