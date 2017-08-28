@@ -15,6 +15,8 @@ class TeamResultsController extends AppController
 
     public function getOverallTable($leagueId)
     {
+        $table = $this->TeamResults->getOverallTable($leagueId, 42, 1,1,1,1);
+        debug($table->toArray());
         $table = [
             ['id' => 284,'name' => 'IFK Norrköping','GP' => 38,'W' => 24,'D' => 7,'L' => 7,'GF' => 71,'GA' => 44,'Diff' => 27,'Points' => 79,'Sort' => 790294],
             ['id' => 271,'name' => 'Malmö FF','GP' => 35,'W' => 20,'D' => 9,'L' => 6,'GF' => 67,'GA' => 36,'Diff' => 31,'Points' => 69,'Sort' => 690330],
