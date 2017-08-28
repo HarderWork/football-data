@@ -13,9 +13,12 @@ use FootballData\Controller\AppController;
 class TeamResultsController extends AppController
 {
 
-    public function getOverallTable($leagueId)
+    public function getOverallTable($leagueId, $seasonId, $home = 1, $away = 1, $toDate = null, $gamePlayed = 0)
     {
-        $table = $this->TeamResults->getOverallTable($leagueId, 42, 1,1,1,1);
+        if (empty($toDate)) {
+            $toDate = date('Y-m-d');
+        }
+        $table = $this->TeamResults->getOverallTable($leagueId, $seasonId, $home, $away, $toDate, $gamePlayed);
         debug($table->toArray());
         $table = [
             ['id' => 284,'name' => 'IFK Norrköping','GP' => 38,'W' => 24,'D' => 7,'L' => 7,'GF' => 71,'GA' => 44,'Diff' => 27,'Points' => 79,'Sort' => 790294],

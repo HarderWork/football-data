@@ -165,67 +165,19 @@ class TeamResultsTable extends Table
                ])
            ->where([
                'TeamResults.league_id' => $leagueId,
-               'TeamResults.season_id' => $seasonId])
+               'TeamResults.season_id' => $seasonId,
+               'TeamResults.home_team' => $homeGames,
+               'TeamResults.away_team' => $awayGames,
+               'TeamResults.game_date <' => $toDate,
+               'TeamResults.game_played >=' => $gamePlayed,
+               ])
            ->group('Teams.id')
            ->order(['"Sort" DESC', 'Teams.name ASC'])
-           ->contain(['Teams']);
-        /*
-		$cacheId = 'overalltable_' . $leagueId . '_' . $seasonId . '_' . $homeGames . '_' . $awayGames . '_' . $toDate . '_' . $gamePlayed;
-		$result = Cache::read($cacheId, 'results');
-		if (!$result) {
-			$condition1 = array('"TeamResult"."league_id"' => $leagueId, '"TeamResult"."season_id"' => $seasonId ); 
-			$condition2 = array('"TeamResult"."bHomeTeam"' => $homeGames);
-			$condition3 = array('"TeamResult"."bHomeTeam"' => $awayGames);
-			$condition4 = array('"TeamResult"."dGameDate" <' => $toDate);
-			$condition5 = array('"TeamResult"."bGamePlayed" >=' => $gamePlayed);
-			$conditions = array($condition1, array('OR' => array($condition2, $condition3), $condition4, $condition5));
-			$fields = array('"Team"."id"', '"Team"."name"', 'SUM( "TeamResult"."bGamePlayed" ) AS "GP"', 
-							'SUM( "TeamResult"."bWon" ) AS "W", SUM( "TeamResult"."bDraw" ) AS "D", SUM( "TeamResult"."bLoss" ) AS "L"', 
-							'SUM( "TeamResult"."iGoalsForward" ) AS "GF", SUM( "TeamResult"."iGoalsAgainst" ) AS "GA"',
-							'SUM( "TeamResult"."iGoalsForward" - "TeamResult"."iGoalsAgainst" ) AS "Diff"',
-							'SUM( "TeamResult"."iPoints" ) AS "Points"',
-							'SUM( "iPoints" )*10000 + SUM( "iGoalsForward" - "iGoalsAgainst" )*10 + SUM( "bWon" ) as "Sort"');
-			// Get all teams from league and season and se if anyone is missing
-			$leagueTeams = $this->getTeamsInLeague($leagueId, $seasonId);
-			$table = $this->find('all', array('fields' => $fields, 
-											'conditions' => $conditions,
-											'group' => '"Team"."id"', 
-											'order'=> array(
-												'"Points" DESC', 
-												'"Diff" DESC', 
-												'"GF" DESC',
-												'"GA" ASC',
-												'"W" DESC',
-												'"Team"."name" ASC' )));
-			// Now, check if we need to manually add teams
-			// This happens in the beginning of a season if one team has no games played at all, at home or away
-			if (count($leagueTeams) != count($table)){
-				foreach ($leagueTeams as $team) {
-					$add = True;
-					foreach ($table as $tableTeam) {
-						if ($team['Team']['name'] == $tableTeam['Team']['name']) {
-							$add = false;
-							break;
-						}
-					}
-					if ($add) {
-						$row = $this->__formatEmptyRow($team['Team']['name'], $team['TeamResult']['team_id'], 0);
-						array_push($table, $row);
-					}
-				};
-				// We need to re-sort it
-				$table = Set::sort($table, '{n}.Team.name', 'desc');
-				foreach($table as $key => $row) {
-					// Increase sort param with position based on name to get sort order alfabetically
-					$table[$key][0]['Sort'] += $key;
-				}
-				$table = Set::sort($table, '{n}.0.Sort', 'desc');
-			}
-			$result = $table;
-			Cache::write($cacheId, $result, 'results');
-		}
-        */
-		return $result;
+           ->contain(['Teams'])
+           ->cache(sprintf(
+               'getOverallTable_%s_%s_%s_%s_%s_%s',
+               $leagueId, $seasonId, $homeGames, $awayGames, $toDate, $gamePlayed),
+            'footballdata');
 	}
 
 }
