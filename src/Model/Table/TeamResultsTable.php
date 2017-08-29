@@ -145,38 +145,48 @@ class TeamResultsTable extends Table
         return $rules;
     }
 
-	public function getOverallTable($leagueId, $seasonId, $homeGames, $awayGames, $toDate, $gamePlayed) {
-       $query = $this->find();
-       $goalDiff = $query->newExpr()->add('SUM(TeamResults.goals_for - TeamResults.goals_against)');
-       $sort = $query->newExpr()->add('SUM(points) * 10000 + SUM(TeamResults.goals_for - TeamResults.goals_against) * 10 + SUM(win)');
-       return $query
-           ->select([
-               'Teams.id',
-               'Teams.name',
-               'GP' => $query->func()->sum('TeamResults.game_played'),
-               'W' => $query->func()->sum('TeamResults.win', ['integer']),
-               'D' => $query->func()->sum('TeamResults.draw'),
-               'L' => $query->func()->sum('TeamResults.loss'),  
-               'GF' => $query->func()->sum('TeamResults.goals_for'),
-               'GA' => $query->func()->sum('TeamResults.goals_against'),
-               'Diff' => $goalDiff,
-               'Points' => $query->func()->sum('TeamResults.points'),
-               'Sort' => $sort,
-               ])
-           ->where([
-               'TeamResults.league_id' => $leagueId,
-               'TeamResults.season_id' => $seasonId,
-               'TeamResults.home_team' => $homeGames,
-               'TeamResults.away_team' => $awayGames,
-               'TeamResults.game_date <' => $toDate,
-               'TeamResults.game_played >=' => $gamePlayed,
-               ])
-           ->group('Teams.id')
-           ->order(['"Sort" DESC', 'Teams.name ASC'])
-           ->contain(['Teams'])
-           ->cache(sprintf(
-               'getOverallTable_%s_%s_%s_%s_%s_%s',
-               $leagueId, $seasonId, $homeGames, $awayGames, $toDate, $gamePlayed),
+	public function getOverallTable($leagueId, $seasonId, $whichGames, $toDate, $gamePlayed) {
+        $query = $this->find();
+        $goalDiff = $query->newExpr()->add('SUM(TeamResults.goals_for - TeamResults.goals_against)');
+        $sort = $query->newExpr()->add('SUM(points) * 10000 + SUM(TeamResults.goals_for - TeamResults.goals_against) * 10 + SUM(win)');
+        $query = $query
+            ->select([
+                'Teams.id',
+                'Teams.name',
+                'GP' => $query->func()->sum('TeamResults.game_played'),
+                'W' => $query->func()->sum('TeamResults.win', ['integer']),
+                'D' => $query->func()->sum('TeamResults.draw'),
+                'L' => $query->func()->sum('TeamResults.loss'),  
+                'GF' => $query->func()->sum('TeamResults.goals_for'),
+                'GA' => $query->func()->sum('TeamResults.goals_against'),
+                'Diff' => $goalDiff,
+                'Points' => $query->func()->sum('TeamResults.points'),
+                'Sort' => $sort,
+                ])
+            ->where([
+                'TeamResults.league_id' => $leagueId,
+                'TeamResults.season_id' => $seasonId,
+                'TeamResults.game_date <' => $toDate,
+                'TeamResults.game_played >=' => $gamePlayed,
+                ])
+            ->group('Teams.id')
+            ->order(['"Sort" DESC', 'Teams.name ASC'])
+            ->contain(['Teams']);
+        switch ($whichGames) {
+            case 'home':
+                $query->where(['TeamResults.home_team' => 1]);
+                break;
+            case 'away':
+                $query->where(['TeamResults.away_team' => 1]);
+                break;
+            default:
+                # code...
+                break;
+        }
+
+        return $query->cache(sprintf(
+            'getOverallTable_%s_%s_%s_%s_%s',
+            $leagueId, $seasonId, $whichGames, $toDate, $gamePlayed),
             'footballdata');
 	}
 

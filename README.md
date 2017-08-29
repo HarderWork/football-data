@@ -33,3 +33,8 @@ If tables are not created, run
 ```
 bin/cake migrations migrate -p FootballData
 ```
+
+In your environment, define
+```
+CACHE_FOOTBALLDATA_URL
+```
