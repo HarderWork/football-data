@@ -1,7 +1,7 @@
 # FootballData plugin for CakePHP
 
 ## Installation
-Goto <app> folder and run
+Goto app folder and run
 
 ```
 composer require harderwork/football-data
