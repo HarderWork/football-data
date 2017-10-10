@@ -10,12 +10,12 @@
     },
     "autoload": {
         "psr-4": {
-            "harderwork\\football-data\\": "src"
+            "HarderWork\\FootballData\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "harderwork\\football-data\\Test\\": "tests",
+            "HarderWork\\FootballData\\Test\\": "tests",
             "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
         }
     }
