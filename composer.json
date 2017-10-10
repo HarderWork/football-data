@@ -1,5 +1,5 @@
 {
-    "name": "HarderWork/FootballData",
+    "name": "harderwork/football-data",
     "description": "FootballData plugin for CakePHP",
     "type": "cakephp-plugin",
     "require": {
@@ -10,12 +10,12 @@
     },
     "autoload": {
         "psr-4": {
-            "HarderWork\\FootballData\\": "src"
+            "harderwork\\football-data\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "HarderWork\\FootballData\\Test\\": "tests",
+            "harderwork\\football-data\\Test\\": "tests",
             "Cake\\Test\\": "./vendor/cakephp/cakephp/tests"
         }
     }
