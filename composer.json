@@ -1,7 +1,17 @@
 {
     "name": "harderwork/football-data",
-    "description": "FootballData plugin for CakePHP",
+    "description": "FootballData plugin for CakePHP 3.x",
     "type": "cakephp-plugin",
+    "homepage": "https://github.com/HarderWork/football-data",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Härder",
+            "email": "peter@harderwork.se",
+            "homepage": "http://www.harderwork.se",
+            "role": "Maintainer"
+        }
+    ],
     "require": {
         "cakephp/cakephp": "^3.4"
     },
