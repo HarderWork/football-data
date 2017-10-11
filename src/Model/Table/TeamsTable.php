@@ -9,17 +9,17 @@ use Cake\Validation\Validator;
 /**
  * Teams Model
  *
- * @property \FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\BelongsTo $Leagues
- * @property \FootballData\Model\Table\TeamAliasesTable|\Cake\ORM\Association\HasMany $TeamAliases
- * @property \FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
+ * @property \HarderWork\FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\BelongsTo $Leagues
+ * @property \HarderWork\FootballData\Model\Table\TeamAliasesTable|\Cake\ORM\Association\HasMany $TeamAliases
+ * @property \HarderWork\FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
  *
- * @method \FootballData\Model\Entity\Team get($primaryKey, $options = [])
- * @method \FootballData\Model\Entity\Team newEntity($data = null, array $options = [])
- * @method \FootballData\Model\Entity\Team[] newEntities(array $data, array $options = [])
- * @method \FootballData\Model\Entity\Team|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \FootballData\Model\Entity\Team patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \FootballData\Model\Entity\Team[] patchEntities($entities, array $data, array $options = [])
- * @method \FootballData\Model\Entity\Team findOrCreate($search, callable $callback = null, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Team get($primaryKey, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Team newEntity($data = null, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Team[] newEntities(array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Team|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Team patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Team[] patchEntities($entities, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Team findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

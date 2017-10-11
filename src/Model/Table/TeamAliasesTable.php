@@ -9,15 +9,15 @@ use Cake\Validation\Validator;
 /**
  * TeamAliases Model
  *
- * @property \FootballData\Model\Table\TeamsTable|\Cake\ORM\Association\BelongsTo $Teams
+ * @property \HarderWork\FootballData\Model\Table\TeamsTable|\Cake\ORM\Association\BelongsTo $Teams
  *
- * @method \FootballData\Model\Entity\TeamAlias get($primaryKey, $options = [])
- * @method \FootballData\Model\Entity\TeamAlias newEntity($data = null, array $options = [])
- * @method \FootballData\Model\Entity\TeamAlias[] newEntities(array $data, array $options = [])
- * @method \FootballData\Model\Entity\TeamAlias|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \FootballData\Model\Entity\TeamAlias patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \FootballData\Model\Entity\TeamAlias[] patchEntities($entities, array $data, array $options = [])
- * @method \FootballData\Model\Entity\TeamAlias findOrCreate($search, callable $callback = null, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamAlias get($primaryKey, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamAlias newEntity($data = null, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamAlias[] newEntities(array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamAlias|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamAlias patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamAlias[] patchEntities($entities, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamAlias findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

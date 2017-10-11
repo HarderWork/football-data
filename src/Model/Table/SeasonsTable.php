@@ -9,21 +9,21 @@ use Cake\Validation\Validator;
 /**
  * Seasons Model
  *
- * @property \FootballData\Model\Table\FixturesTable|\Cake\ORM\Association\HasMany $Fixtures
- * @property \FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\HasMany $Leagues
- * @property \FootballData\Model\Table\PoolDividersTable|\Cake\ORM\Association\HasMany $PoolDividers
- * @property \FootballData\Model\Table\PoolLeaguesTable|\Cake\ORM\Association\HasMany $PoolLeagues
- * @property \FootballData\Model\Table\PoolPlayedGamesTable|\Cake\ORM\Association\HasMany $PoolPlayedGames
- * @property \FootballData\Model\Table\PoolTeamResultsTable|\Cake\ORM\Association\HasMany $PoolTeamResults
- * @property \FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
+ * @property \HarderWork\FootballData\Model\Table\FixturesTable|\Cake\ORM\Association\HasMany $Fixtures
+ * @property \HarderWork\FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\HasMany $Leagues
+ * @property \HarderWork\FootballData\Model\Table\PoolDividersTable|\Cake\ORM\Association\HasMany $PoolDividers
+ * @property \HarderWork\FootballData\Model\Table\PoolLeaguesTable|\Cake\ORM\Association\HasMany $PoolLeagues
+ * @property \HarderWork\FootballData\Model\Table\PoolPlayedGamesTable|\Cake\ORM\Association\HasMany $PoolPlayedGames
+ * @property \HarderWork\FootballData\Model\Table\PoolTeamResultsTable|\Cake\ORM\Association\HasMany $PoolTeamResults
+ * @property \HarderWork\FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
  *
- * @method \FootballData\Model\Entity\Season get($primaryKey, $options = [])
- * @method \FootballData\Model\Entity\Season newEntity($data = null, array $options = [])
- * @method \FootballData\Model\Entity\Season[] newEntities(array $data, array $options = [])
- * @method \FootballData\Model\Entity\Season|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \FootballData\Model\Entity\Season patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \FootballData\Model\Entity\Season[] patchEntities($entities, array $data, array $options = [])
- * @method \FootballData\Model\Entity\Season findOrCreate($search, callable $callback = null, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Season get($primaryKey, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Season newEntity($data = null, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Season[] newEntities(array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Season|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Season patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Season[] patchEntities($entities, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Season findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

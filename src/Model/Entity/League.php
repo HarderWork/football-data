@@ -16,14 +16,14 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \FootballData\Model\Entity\Season $season
- * @property \FootballData\Model\Entity\Fixture[] $fixtures
- * @property \FootballData\Model\Entity\PoolDivider[] $pool_dividers
- * @property \FootballData\Model\Entity\PoolPlayedGame[] $pool_played_games
- * @property \FootballData\Model\Entity\PoolTeamResult[] $pool_team_results
- * @property \FootballData\Model\Entity\PoolTeam[] $pool_teams
- * @property \FootballData\Model\Entity\TeamResult[] $team_results
- * @property \FootballData\Model\Entity\Team[] $teams
+ * @property \HarderWork\FootballData\Model\Entity\Season $season
+ * @property \HarderWork\FootballData\Model\Entity\Fixture[] $fixtures
+ * @property \HarderWork\FootballData\Model\Entity\PoolDivider[] $pool_dividers
+ * @property \HarderWork\FootballData\Model\Entity\PoolPlayedGame[] $pool_played_games
+ * @property \HarderWork\FootballData\Model\Entity\PoolTeamResult[] $pool_team_results
+ * @property \HarderWork\FootballData\Model\Entity\PoolTeam[] $pool_teams
+ * @property \HarderWork\FootballData\Model\Entity\TeamResult[] $team_results
+ * @property \HarderWork\FootballData\Model\Entity\Team[] $teams
  */
 class League extends Entity
 {

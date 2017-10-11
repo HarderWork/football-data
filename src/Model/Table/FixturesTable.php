@@ -9,19 +9,19 @@ use Cake\Validation\Validator;
 /**
  * Fixtures Model
  *
- * @property \FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\BelongsTo $Leagues
- * @property \FootballData\Model\Table\SeasonsTable|\Cake\ORM\Association\BelongsTo $Seasons
- * @property \FootballData\Model\Table\HomeTeamsTable|\Cake\ORM\Association\BelongsTo $HomeTeams
- * @property \FootballData\Model\Table\AwayTeamsTable|\Cake\ORM\Association\BelongsTo $AwayTeams
- * @property \FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
+ * @property \HarderWork\FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\BelongsTo $Leagues
+ * @property \HarderWork\FootballData\Model\Table\SeasonsTable|\Cake\ORM\Association\BelongsTo $Seasons
+ * @property \HarderWork\FootballData\Model\Table\HomeTeamsTable|\Cake\ORM\Association\BelongsTo $HomeTeams
+ * @property \HarderWork\FootballData\Model\Table\AwayTeamsTable|\Cake\ORM\Association\BelongsTo $AwayTeams
+ * @property \HarderWork\FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
  *
- * @method \FootballData\Model\Entity\Fixture get($primaryKey, $options = [])
- * @method \FootballData\Model\Entity\Fixture newEntity($data = null, array $options = [])
- * @method \FootballData\Model\Entity\Fixture[] newEntities(array $data, array $options = [])
- * @method \FootballData\Model\Entity\Fixture|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \FootballData\Model\Entity\Fixture patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \FootballData\Model\Entity\Fixture[] patchEntities($entities, array $data, array $options = [])
- * @method \FootballData\Model\Entity\Fixture findOrCreate($search, callable $callback = null, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Fixture get($primaryKey, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Fixture newEntity($data = null, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Fixture[] newEntities(array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Fixture|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Fixture patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Fixture[] patchEntities($entities, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\Fixture findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

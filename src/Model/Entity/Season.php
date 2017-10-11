@@ -11,13 +11,13 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \FootballData\Model\Entity\Fixture[] $fixtures
- * @property \FootballData\Model\Entity\League[] $leagues
- * @property \FootballData\Model\Entity\PoolDivider[] $pool_dividers
- * @property \FootballData\Model\Entity\PoolLeague[] $pool_leagues
- * @property \FootballData\Model\Entity\PoolPlayedGame[] $pool_played_games
- * @property \FootballData\Model\Entity\PoolTeamResult[] $pool_team_results
- * @property \FootballData\Model\Entity\TeamResult[] $team_results
+ * @property \HarderWork\FootballData\Model\Entity\Fixture[] $fixtures
+ * @property \HarderWork\FootballData\Model\Entity\League[] $leagues
+ * @property \HarderWork\FootballData\Model\Entity\PoolDivider[] $pool_dividers
+ * @property \HarderWork\FootballData\Model\Entity\PoolLeague[] $pool_leagues
+ * @property \HarderWork\FootballData\Model\Entity\PoolPlayedGame[] $pool_played_games
+ * @property \HarderWork\FootballData\Model\Entity\PoolTeamResult[] $pool_team_results
+ * @property \HarderWork\FootballData\Model\Entity\TeamResult[] $team_results
  */
 class Season extends Entity
 {

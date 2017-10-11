@@ -3,10 +3,10 @@ namespace HarderWork\FootballData\Test\TestCase\Model\Table;
 
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
-use FootballData\Model\Table\TeamsTable;
+use HarderWork\FootballData\Model\Table\TeamsTable;
 
 /**
- * FootballData\Model\Table\TeamsTable Test Case
+ * HarderWork\FootballData\Model\Table\TeamsTable Test Case
  */
 class TeamsTableTest extends TestCase
 {
@@ -14,7 +14,7 @@ class TeamsTableTest extends TestCase
     /**
      * Test subject
      *
-     * @var \FootballData\Model\Table\TeamsTable
+     * @var \HarderWork\FootballData\Model\Table\TeamsTable
      */
     public $Teams;
 

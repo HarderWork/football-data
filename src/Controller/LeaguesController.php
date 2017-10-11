@@ -1,14 +1,14 @@
 <?php
-namespace FootballData\Controller;
+namespace HarderWork\FootballData\Controller;
 
-use FootballData\Controller\AppController;
+use HarderWork\FootballData\Controller\AppController;
 
 /**
  * Leagues Controller
  *
- * @property \FootballData\Model\Table\LeaguesTable $Leagues
+ * @property \HarderWork\FootballData\Model\Table\LeaguesTable $Leagues
  *
- * @method \FootballData\Model\Entity\League[] paginate($object = null, array $settings = [])
+ * @method \HarderWork\FootballData\Model\Entity\League[] paginate($object = null, array $settings = [])
  */
 class LeaguesController extends AppController
 {

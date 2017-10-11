@@ -24,10 +24,10 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \FootballData\Model\Entity\Team $team
- * @property \FootballData\Model\Entity\Fixture $fixture
- * @property \FootballData\Model\Entity\League $league
- * @property \FootballData\Model\Entity\Season $season
+ * @property \HarderWork\FootballData\Model\Entity\Team $team
+ * @property \HarderWork\FootballData\Model\Entity\Fixture $fixture
+ * @property \HarderWork\FootballData\Model\Entity\League $league
+ * @property \HarderWork\FootballData\Model\Entity\Season $season
  */
 class TeamResult extends Entity
 {

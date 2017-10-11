@@ -1,6 +1,6 @@
 <?php
 
-namespace FootballData\Controller;
+namespace HarderWork\FootballData\Controller;
 
 use App\Controller\AppController as BaseController;
 

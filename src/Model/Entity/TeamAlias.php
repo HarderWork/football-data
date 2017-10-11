@@ -12,7 +12,7 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \FootballData\Model\Entity\Team $team
+ * @property \HarderWork\FootballData\Model\Entity\Team $team
  */
 class TeamAlias extends Entity
 {

@@ -3,10 +3,10 @@ namespace HarderWork\FootballData\Test\TestCase\Model\Table;
 
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
-use FootballData\Model\Table\TeamAliasesTable;
+use HarderWork\FootballData\Model\Table\TeamAliasesTable;
 
 /**
- * FootballData\Model\Table\TeamAliasesTable Test Case
+ * HarderWork\FootballData\Model\Table\TeamAliasesTable Test Case
  */
 class TeamAliasesTableTest extends TestCase
 {

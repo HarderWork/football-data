@@ -9,18 +9,18 @@ use Cake\Validation\Validator;
 /**
  * TeamResults Model
  *
- * @property \FootballData\Model\Table\TeamsTable|\Cake\ORM\Association\BelongsTo $Teams
- * @property \FootballData\Model\Table\FixturesTable|\Cake\ORM\Association\BelongsTo $Fixtures
- * @property \FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\BelongsTo $Leagues
- * @property \FootballData\Model\Table\SeasonsTable|\Cake\ORM\Association\BelongsTo $Seasons
+ * @property \HarderWork\FootballData\Model\Table\TeamsTable|\Cake\ORM\Association\BelongsTo $Teams
+ * @property \HarderWork\FootballData\Model\Table\FixturesTable|\Cake\ORM\Association\BelongsTo $Fixtures
+ * @property \HarderWork\FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\BelongsTo $Leagues
+ * @property \HarderWork\FootballData\Model\Table\SeasonsTable|\Cake\ORM\Association\BelongsTo $Seasons
  *
- * @method \FootballData\Model\Entity\TeamResult get($primaryKey, $options = [])
- * @method \FootballData\Model\Entity\TeamResult newEntity($data = null, array $options = [])
- * @method \FootballData\Model\Entity\TeamResult[] newEntities(array $data, array $options = [])
- * @method \FootballData\Model\Entity\TeamResult|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \FootballData\Model\Entity\TeamResult patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \FootballData\Model\Entity\TeamResult[] patchEntities($entities, array $data, array $options = [])
- * @method \FootballData\Model\Entity\TeamResult findOrCreate($search, callable $callback = null, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamResult get($primaryKey, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamResult newEntity($data = null, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamResult[] newEntities(array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamResult|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamResult patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamResult[] patchEntities($entities, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\TeamResult findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

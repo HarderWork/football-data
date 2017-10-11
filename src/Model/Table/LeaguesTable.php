@@ -9,22 +9,22 @@ use Cake\Validation\Validator;
 /**
  * Leagues Model
  *
- * @property \FootballData\Model\Table\SeasonsTable|\Cake\ORM\Association\BelongsTo $Seasons
- * @property \FootballData\Model\Table\FixturesTable|\Cake\ORM\Association\HasMany $Fixtures
- * @property \FootballData\Model\Table\PoolDividersTable|\Cake\ORM\Association\HasMany $PoolDividers
- * @property \FootballData\Model\Table\PoolPlayedGamesTable|\Cake\ORM\Association\HasMany $PoolPlayedGames
- * @property \FootballData\Model\Table\PoolTeamResultsTable|\Cake\ORM\Association\HasMany $PoolTeamResults
- * @property \FootballData\Model\Table\PoolTeamsTable|\Cake\ORM\Association\HasMany $PoolTeams
- * @property \FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
- * @property \FootballData\Model\Table\TeamsTable|\Cake\ORM\Association\HasMany $Teams
+ * @property \HarderWork\FootballData\Model\Table\SeasonsTable|\Cake\ORM\Association\BelongsTo $Seasons
+ * @property \HarderWork\FootballData\Model\Table\FixturesTable|\Cake\ORM\Association\HasMany $Fixtures
+ * @property \HarderWork\FootballData\Model\Table\PoolDividersTable|\Cake\ORM\Association\HasMany $PoolDividers
+ * @property \HarderWork\FootballData\Model\Table\PoolPlayedGamesTable|\Cake\ORM\Association\HasMany $PoolPlayedGames
+ * @property \HarderWork\FootballData\Model\Table\PoolTeamResultsTable|\Cake\ORM\Association\HasMany $PoolTeamResults
+ * @property \HarderWork\FootballData\Model\Table\PoolTeamsTable|\Cake\ORM\Association\HasMany $PoolTeams
+ * @property \HarderWork\FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
+ * @property \HarderWork\FootballData\Model\Table\TeamsTable|\Cake\ORM\Association\HasMany $Teams
  *
- * @method \FootballData\Model\Entity\League get($primaryKey, $options = [])
- * @method \FootballData\Model\Entity\League newEntity($data = null, array $options = [])
- * @method \FootballData\Model\Entity\League[] newEntities(array $data, array $options = [])
- * @method \FootballData\Model\Entity\League|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \FootballData\Model\Entity\League patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \FootballData\Model\Entity\League[] patchEntities($entities, array $data, array $options = [])
- * @method \FootballData\Model\Entity\League findOrCreate($search, callable $callback = null, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\League get($primaryKey, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\League newEntity($data = null, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\League[] newEntities(array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\League|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\League patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\League[] patchEntities($entities, array $data, array $options = [])
+ * @method \HarderWork\FootballData\Model\Entity\League findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */

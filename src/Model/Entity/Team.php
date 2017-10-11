@@ -21,9 +21,9 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \FootballData\Model\Entity\League $league
- * @property \FootballData\Model\Entity\TeamAlias[] $team_aliases
- * @property \FootballData\Model\Entity\TeamResult[] $team_results
+ * @property \HarderWork\FootballData\Model\Entity\League $league
+ * @property \HarderWork\FootballData\Model\Entity\TeamAlias[] $team_aliases
+ * @property \HarderWork\FootballData\Model\Entity\TeamResult[] $team_results
  */
 class Team extends Entity
 {

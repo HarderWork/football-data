@@ -21,11 +21,11 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\FrozenTime $created
  * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \FootballData\Model\Entity\League $league
- * @property \FootballData\Model\Entity\Season $season
- * @property \FootballData\Model\Entity\HomeTeam $home_team
- * @property \FootballData\Model\Entity\AwayTeam $away_team
- * @property \FootballData\Model\Entity\TeamResult[] $team_results
+ * @property \HarderWork\FootballData\Model\Entity\League $league
+ * @property \HarderWork\FootballData\Model\Entity\Season $season
+ * @property \HarderWork\FootballData\Model\Entity\HomeTeam $home_team
+ * @property \HarderWork\FootballData\Model\Entity\AwayTeam $away_team
+ * @property \HarderWork\FootballData\Model\Entity\TeamResult[] $team_results
  */
 class Fixture extends Entity
 {
