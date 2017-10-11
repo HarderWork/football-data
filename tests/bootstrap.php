@@ -1,4 +1,5 @@
 <?php
+use Cake\Cache\Cache;
 /**
  * Test suite bootstrap for FootballData.
  *
@@ -28,3 +29,14 @@ if (file_exists($root . '/config/bootstrap.php')) {
     return;
 }
 require $root . '/vendor/cakephp/cakephp/tests/bootstrap.php';
+
+Cache::config('footballdata', [
+    'className' => 'File',
+    'duration' => '+1 seconds',
+    'path' => '/tmp',
+    'prefix' => 'footballdata_test_'
+]);
+
+//$connection = Cake\Datasource\ConnectionManager::get('test');
+//var_dump($connection);
+//Cake\Datasource\ConnectionManager::config('test', ['url' => getenv('DATABASE_TEST_URL')]);

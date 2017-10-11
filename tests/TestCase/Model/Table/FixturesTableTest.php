@@ -1,5 +1,5 @@
 <?php
-namespace FootballData\Test\TestCase\Model\Table;
+namespace HarderWork\FootballData\Test\TestCase\Model\Table;
 
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
@@ -27,8 +27,7 @@ class FixturesTableTest extends TestCase
         'plugin.football_data.fixtures',
         'plugin.football_data.leagues',
         'plugin.football_data.seasons',
-        'plugin.football_data.home_teams',
-        'plugin.football_data.away_teams',
+        'plugin.football_data.teams',
         'plugin.football_data.team_results'
     ];
 

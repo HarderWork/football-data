@@ -1,5 +1,5 @@
 <?php
-namespace FootballData\Model\Table;
+namespace HarderWork\FootballData\Model\Table;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
@@ -145,7 +145,22 @@ class TeamResultsTable extends Table
         return $rules;
     }
 
-	public function getOverallTable($leagueId, $seasonId, $whichGames, $toDate, $gamePlayed) {
+    public function getTeamsInLeague($leagueId, $seasonId)
+    {
+        $query = $this->find();
+        $query->select(['TeamResults.team_id', 'Teams.name'])
+            ->distinct(['TeamResults.team_id'])
+            ->where(['TeamResults.league_id' => $leagueId, 'TeamResults.season_id' => $seasonId])
+            ->order(['Teamresults.team_id'])
+            ->contain(['Teams']);
+        return $query->cache(sprintf(
+            'teamresults_teams_%s_%s',
+            $leagueId, $seasonId),
+            'footballdata');
+    }
+
+	public function getOverallTable($leagueId, $seasonId, $whichGames, $toDate, $gamePlayed)
+    {
         $query = $this->find();
         $goalDiff = $query->newExpr()->add('SUM(TeamResults.goals_for - TeamResults.goals_against)');
         $sort = $query->newExpr()->add('SUM(points) * 10000 + SUM(TeamResults.goals_for - TeamResults.goals_against) * 10 + SUM(win)');
@@ -153,14 +168,14 @@ class TeamResultsTable extends Table
             ->select([
                 'Teams.id',
                 'Teams.name',
-                'GP' => $query->func()->sum('TeamResults.game_played'),
-                'W' => $query->func()->sum('TeamResults.win', ['integer']),
-                'D' => $query->func()->sum('TeamResults.draw'),
-                'L' => $query->func()->sum('TeamResults.loss'),  
-                'GF' => $query->func()->sum('TeamResults.goals_for'),
-                'GA' => $query->func()->sum('TeamResults.goals_against'),
+                'GP' => $query->func()->sum('TeamResults.game_played', ['integer']),
+                'W'  => $query->func()->sum('TeamResults.win', ['integer']),
+                'D'  => $query->func()->sum('TeamResults.draw', ['integer']),
+                'L'  => $query->func()->sum('TeamResults.loss', ['integer']),
+                'GF' => $query->func()->sum('TeamResults.goals_for', ['integer']),
+                'GA' => $query->func()->sum('TeamResults.goals_against', ['integer']),
                 'Diff' => $goalDiff,
-                'Points' => $query->func()->sum('TeamResults.points'),
+                'Points' => $query->func()->sum('TeamResults.points', ['integer']),
                 'Sort' => $sort,
                 ])
             ->where([

@@ -1,5 +1,5 @@
 <?php
-namespace FootballData\Model\Table;
+namespace HarderWork\FootballData\Model\Table;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;

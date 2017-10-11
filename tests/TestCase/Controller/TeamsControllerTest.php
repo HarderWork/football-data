@@ -1,5 +1,5 @@
 <?php
-namespace FootballData\Test\TestCase\Controller;
+namespace HarderWork\FootballData\Test\TestCase\Controller;
 
 use Cake\TestSuite\IntegrationTestCase;
 use FootballData\Controller\TeamsController;

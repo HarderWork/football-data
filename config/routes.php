@@ -4,7 +4,7 @@ use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
 Router::plugin(
-    'FootballData',
+    'HarderWork/FootballData',
     ['path' => '/football-data'],
     function (RouteBuilder $routes) {
         $routes->extensions(['json', 'xml']);

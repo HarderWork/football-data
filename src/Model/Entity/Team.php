@@ -1,5 +1,5 @@
 <?php
-namespace FootballData\Model\Entity;
+namespace HarderWork\FootballData\Model\Entity;
 
 use Cake\ORM\Entity;
 

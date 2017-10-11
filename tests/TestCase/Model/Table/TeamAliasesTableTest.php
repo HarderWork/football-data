@@ -1,5 +1,5 @@
 <?php
-namespace FootballData\Test\TestCase\Model\Table;
+namespace HarderWork\FootballData\Test\TestCase\Model\Table;
 
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
