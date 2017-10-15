@@ -11,10 +11,6 @@ use Cake\Validation\Validator;
  *
  * @property \HarderWork\FootballData\Model\Table\FixturesTable|\Cake\ORM\Association\HasMany $Fixtures
  * @property \HarderWork\FootballData\Model\Table\LeaguesTable|\Cake\ORM\Association\HasMany $Leagues
- * @property \HarderWork\FootballData\Model\Table\PoolDividersTable|\Cake\ORM\Association\HasMany $PoolDividers
- * @property \HarderWork\FootballData\Model\Table\PoolLeaguesTable|\Cake\ORM\Association\HasMany $PoolLeagues
- * @property \HarderWork\FootballData\Model\Table\PoolPlayedGamesTable|\Cake\ORM\Association\HasMany $PoolPlayedGames
- * @property \HarderWork\FootballData\Model\Table\PoolTeamResultsTable|\Cake\ORM\Association\HasMany $PoolTeamResults
  * @property \HarderWork\FootballData\Model\Table\TeamResultsTable|\Cake\ORM\Association\HasMany $TeamResults
  *
  * @method \HarderWork\FootballData\Model\Entity\Season get($primaryKey, $options = [])
@@ -53,22 +49,6 @@ class SeasonsTable extends Table
         $this->hasMany('Leagues', [
             'foreignKey' => 'season_id',
             'className' => 'FootballData.Leagues'
-        ]);
-        $this->hasMany('PoolDividers', [
-            'foreignKey' => 'season_id',
-            'className' => 'FootballData.PoolDividers'
-        ]);
-        $this->hasMany('PoolLeagues', [
-            'foreignKey' => 'season_id',
-            'className' => 'FootballData.PoolLeagues'
-        ]);
-        $this->hasMany('PoolPlayedGames', [
-            'foreignKey' => 'season_id',
-            'className' => 'FootballData.PoolPlayedGames'
-        ]);
-        $this->hasMany('PoolTeamResults', [
-            'foreignKey' => 'season_id',
-            'className' => 'FootballData.PoolTeamResults'
         ]);
         $this->hasMany('TeamResults', [
             'foreignKey' => 'season_id',

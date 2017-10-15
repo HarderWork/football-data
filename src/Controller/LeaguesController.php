@@ -39,7 +39,7 @@ class LeaguesController extends AppController
     public function view($id = null)
     {
         $league = $this->Leagues->get($id, [
-            'contain' => ['Seasons', 'Fixtures', 'PoolDividers', 'PoolPlayedGames', 'PoolTeamResults', 'PoolTeams', 'TeamResults', 'Teams']
+            'contain' => ['Seasons', 'Fixtures', 'TeamResults', 'Teams']
         ]);
 
         $this->set('league', $league);

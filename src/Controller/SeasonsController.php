@@ -36,7 +36,7 @@ class SeasonsController extends AppController
     public function view($id = null)
     {
         $season = $this->Seasons->get($id, [
-            'contain' => ['Fixtures', 'Leagues', 'PoolDividers', 'PoolLeagues', 'PoolPlayedGames', 'PoolTeamResults', 'TeamResults']
+            'contain' => ['Fixtures', 'Leagues', 'TeamResults']
         ]);
 
         $this->set('season', $season);

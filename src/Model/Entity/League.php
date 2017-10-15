@@ -18,10 +18,6 @@ use Cake\ORM\Entity;
  *
  * @property \HarderWork\FootballData\Model\Entity\Season $season
  * @property \HarderWork\FootballData\Model\Entity\Fixture[] $fixtures
- * @property \HarderWork\FootballData\Model\Entity\PoolDivider[] $pool_dividers
- * @property \HarderWork\FootballData\Model\Entity\PoolPlayedGame[] $pool_played_games
- * @property \HarderWork\FootballData\Model\Entity\PoolTeamResult[] $pool_team_results
- * @property \HarderWork\FootballData\Model\Entity\PoolTeam[] $pool_teams
  * @property \HarderWork\FootballData\Model\Entity\TeamResult[] $team_results
  * @property \HarderWork\FootballData\Model\Entity\Team[] $teams
  */
