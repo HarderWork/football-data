@@ -25,11 +25,11 @@ class TeamResultsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.football_data.team_results',
-        'plugin.football_data.teams',
-        'plugin.football_data.fixtures',
-        'plugin.football_data.leagues',
-        'plugin.football_data.seasons'
+        'plugin.HarderWork/FootballData.team_results',
+        'plugin.HarderWork/FootballData.teams',
+        'plugin.HarderWork/FootballData.fixtures',
+        'plugin.HarderWork/FootballData.leagues',
+        'plugin.HarderWork/FootballData.seasons'
     ];
 
     /**

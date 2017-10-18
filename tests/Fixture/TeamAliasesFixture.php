@@ -1,5 +1,5 @@
 <?php
-namespace FootballData\Test\Fixture;
+namespace HarderWork\FootballData\Test\Fixture;
 
 use Cake\TestSuite\Fixture\TestFixture;
 

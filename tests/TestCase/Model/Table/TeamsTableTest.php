@@ -24,10 +24,10 @@ class TeamsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.football_data.teams',
-        'plugin.football_data.leagues',
-        'plugin.football_data.team_aliases',
-        'plugin.football_data.team_results'
+        'plugin.HarderWork/FootballData.teams',
+        'plugin.HarderWork/FootballData.leagues',
+        'plugin.HarderWork/FootballData.team_aliases',
+        'plugin.HarderWork/FootballData.team_results'
     ];
 
     /**

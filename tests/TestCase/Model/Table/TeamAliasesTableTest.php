@@ -24,8 +24,8 @@ class TeamAliasesTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'plugin.football_data.team_aliases',
-        'plugin.football_data.teams'
+        'plugin.HarderWork/FootballData.team_aliases',
+        'plugin.HarderWork/FootballData.teams'
     ];
 
     /**
